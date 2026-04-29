@@ -1,0 +1,20 @@
+[package]
+name = "plexus-engine"
+version = "0.1.0"
+edition = "2024"
+description = "Async neuro runtime for the Plexus-Loom backend."
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/plexus-loom/plexus-loom"
+documentation = "https://docs.rs/plexus-engine"
+keywords = ["graph", "engine", "runtime", "async", "plexus"]
+categories = ["asynchronous"]
+
+[dependencies]
+loom-domain = { version = "0.1.0", path = "../loom-domain" }
+loom-weave = { version = "0.1.0", path = "../loom-weave" }
+plexus-core = { version = "0.1.0", path = "../plexus-core" }
+plexus-signal = { version = "0.1.0", path = "../plexus-signal" }
+futures = "0.3"
+rhai = { version = "1", features = ["sync"] }
+thiserror = { workspace = true }
+tokio = { version = "1", features = ["rt", "rt-multi-thread", "macros"] }
