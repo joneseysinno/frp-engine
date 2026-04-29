@@ -3,8 +3,8 @@
 use std::collections::{HashMap, VecDeque};
 use std::time::Duration;
 
-use loom_domain::{EdgeSchedule, HyperEdge};
-use plexus_base::{EdgeId, PortId};
+use frp_domain::{EdgeSchedule, HyperEdge};
+use frp_plexus::{EdgeId, PortId};
 
 /// Tracks scheduling state for all registered edges and accumulates a queue of
 /// edge ids that are ready to execute.
@@ -98,8 +98,8 @@ impl Scheduler {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use loom_domain::{EdgeSchedule, EdgeTransform, HyperEdge};
-    use plexus_base::{EdgeId, PortId};
+    use frp_domain::{EdgeSchedule, EdgeTransform, HyperEdge};
+    use frp_plexus::{EdgeId, PortId};
 
     fn on_change_edge(id: u64, sources: &[u64]) -> HyperEdge {
         HyperEdge::new(

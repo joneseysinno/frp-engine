@@ -6,8 +6,8 @@ use std::pin::Pin;
 use std::sync::Arc;
 use std::sync::RwLock;
 
-use loom_domain::EdgeTransform;
-use plexus_base::Value;
+use frp_domain::EdgeTransform;
+use frp_plexus::Value;
 
 use crate::error::EngineError;
 
@@ -236,7 +236,7 @@ fn dynamic_to_value(d: rhai::Dynamic) -> Value {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use plexus_base::Value;
+    use frp_plexus::Value;
 
     #[tokio::test]
     async fn passthrough_returns_first() {

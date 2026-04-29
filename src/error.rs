@@ -1,6 +1,6 @@
-//! Error types for the plexus-engine crate.
+//! Error types for the frp-engine crate.
 
-use plexus_base::{BlockId, EdgeId, PortId};
+use frp_plexus::{BlockId, EdgeId, PortId};
 use thiserror::Error;
 
 #[derive(Debug, Error)]

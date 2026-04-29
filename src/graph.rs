@@ -5,8 +5,8 @@ use std::collections::{HashMap, HashSet};
 use std::time::Duration;
 
 use futures::future::try_join_all;
-use loom_domain::{Atom, Block, HyperEdge};
-use plexus_base::{AtomId, BlockId, EdgeId, GraphId, PortId, Value};
+use frp_domain::{Atom, Block, HyperEdge};
+use frp_plexus::{AtomId, BlockId, EdgeId, GraphId, PortId, Value};
 
 use crate::error::EngineError;
 use crate::executor::Executor;
@@ -302,11 +302,11 @@ impl Graph {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use loom_domain::{
+    use frp_domain::{
         Atom, AtomKind, AtomMeta, Block, BlockSchema, EdgeSchedule, EdgeTransform, HyperEdge,
         Meta,
     };
-    use plexus_base::{
+    use frp_plexus::{
         AtomId, BlockId, EdgeId, GraphId, LayerTag, PortId, Value,
     };
 

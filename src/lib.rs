@@ -1,4 +1,4 @@
-//! Plexus engine — graph execution runtime for the Plexus-Loom backend.
+//! frp engine — graph execution runtime for the infinite-db frp backend.
 //!
 //! Provides:
 //! - [`Graph`] — the live container that holds blocks, edges, atoms, and port

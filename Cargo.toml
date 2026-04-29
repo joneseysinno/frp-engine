@@ -1,19 +1,19 @@
 [package]
-name = "plexus-engine"
+name = "frp-engine"
 version = "0.1.0"
 edition = "2024"
-description = "Async neuro runtime for the Plexus-Loom backend."
+description = "Async neuro runtime for the infinite-db frp backend."
 license = "MIT OR Apache-2.0"
-repository = "https://github.com/joneseysinno/plexus-engine.git"
-documentation = "https://docs.rs/plexus-engine"
-keywords = ["graph", "engine", "runtime", "async", "plexus"]
+repository = "https://github.com/joneseysinno/frp-engine.git"
+documentation = "https://docs.rs/frp-engine"
+keywords = ["graph", "engine", "runtime", "async", "frp"]
 categories = ["asynchronous"]
 
 [dependencies]
-loom-domain = { version = "0.1.0", path = "../loom-domain" }
-loom-weave = { version = "0.1.0", path = "../loom-weave" }
-plexus-base = { version = "0.1.0", path = "../plexus-core" }
-plexus-signal = { version = "0.1.0", path = "../plexus-signal" }
+frp-domain = { version = "0.1.0", path = "../frp-domain" }
+frp-weave = { version = "0.1.0", path = "../frp-weave" }
+frp-plexus = { version = "0.1.0", path = "../frp-plexus" }
+frp-signal = { version = "0.1.0", path = "../frp-signal" }
 futures = "0.3"
 rhai = { version = "1", features = ["sync"] }
 thiserror = { workspace = true }

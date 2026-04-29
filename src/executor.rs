@@ -2,8 +2,8 @@
 
 use std::collections::HashMap;
 
-use loom_domain::HyperEdge;
-use plexus_base::{PortId, Value};
+use frp_domain::HyperEdge;
+use frp_plexus::{PortId, Value};
 
 use crate::error::EngineError;
 use crate::transform::{TransformRegistry, eval_transform};
@@ -49,8 +49,8 @@ impl Executor {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use loom_domain::{EdgeSchedule, EdgeTransform, HyperEdge};
-    use plexus_base::{EdgeId, PortId, Value};
+    use frp_domain::{EdgeSchedule, EdgeTransform, HyperEdge};
+    use frp_plexus::{EdgeId, PortId, Value};
     use std::sync::Arc;
 
     fn make_edge(

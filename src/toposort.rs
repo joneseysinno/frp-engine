@@ -5,8 +5,8 @@
 
 use std::collections::{HashMap, HashSet, VecDeque};
 
-use loom_domain::HyperEdge;
-use plexus_base::EdgeId;
+use frp_domain::HyperEdge;
+use frp_plexus::EdgeId;
 
 use crate::error::EngineError;
 
@@ -23,7 +23,7 @@ pub fn toposort(edges: &[HyperEdge]) -> Result<Vec<EdgeId>, EngineError> {
     let ids: Vec<EdgeId> = edges.iter().map(|e| e.id).collect();
 
     // Map from output PortId -> EdgeId that produces it.
-    let mut port_producer: HashMap<plexus_base::PortId, EdgeId> = HashMap::new();
+    let mut port_producer: HashMap<frp_plexus::PortId, EdgeId> = HashMap::new();
     for edge in edges {
         for &port in &edge.targets {
             port_producer.insert(port, edge.id);
@@ -82,8 +82,8 @@ pub fn toposort(edges: &[HyperEdge]) -> Result<Vec<EdgeId>, EngineError> {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use loom_domain::{EdgeSchedule, EdgeTransform, HyperEdge};
-    use plexus_base::{EdgeId, PortId};
+    use frp_domain::{EdgeSchedule, EdgeTransform, HyperEdge};
+    use frp_plexus::{EdgeId, PortId};
 
     fn edge(id: u64, sources: &[u64], targets: &[u64]) -> HyperEdge {
         HyperEdge::new(
