@@ -12,7 +12,7 @@ categories = ["asynchronous"]
 [dependencies]
 loom-domain = { version = "0.1.0", path = "../loom-domain" }
 loom-weave = { version = "0.1.0", path = "../loom-weave" }
-plexus-core = { version = "0.1.0", path = "../plexus-core" }
+plexus-base = { version = "0.1.0", path = "../plexus-core" }
 plexus-signal = { version = "0.1.0", path = "../plexus-signal" }
 futures = "0.3"
 rhai = { version = "1", features = ["sync"] }

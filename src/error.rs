@@ -1,6 +1,6 @@
 //! Error types for the plexus-engine crate.
 
-use plexus_core::{BlockId, EdgeId, PortId};
+use plexus_base::{BlockId, EdgeId, PortId};
 use thiserror::Error;
 
 #[derive(Debug, Error)]

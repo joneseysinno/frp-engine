@@ -6,7 +6,7 @@ use std::time::Duration;
 
 use futures::future::try_join_all;
 use loom_domain::{Atom, Block, HyperEdge};
-use plexus_core::{AtomId, BlockId, EdgeId, GraphId, PortId, Value};
+use plexus_base::{AtomId, BlockId, EdgeId, GraphId, PortId, Value};
 
 use crate::error::EngineError;
 use crate::executor::Executor;
@@ -306,7 +306,7 @@ mod tests {
         Atom, AtomKind, AtomMeta, Block, BlockSchema, EdgeSchedule, EdgeTransform, HyperEdge,
         Meta,
     };
-    use plexus_core::{
+    use plexus_base::{
         AtomId, BlockId, EdgeId, GraphId, LayerTag, PortId, Value,
     };
 
